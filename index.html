@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أونورا بوتيك | Onora Boutique</title>
+
+  <!-- خط IBM Plex Sans Arabic -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- أيقونات -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --bg:#3d524d;         
+      --panel:#2e3d39;      
+      --text:#e1d5c5;       
+      --accent:#e1d5c5;     
+      --panel-deeper:#22302c;
+      --white:#ffffff;
+    }
+
+    *{box-sizing:border-box}
+    body {
+      font-family: 'IBM Plex Sans Arabic', sans-serif;
+      background: var(--bg);
+      margin: 0;
+      color: var(--text);
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px 35px;
+    }
+
+    header object {
+      display: block;
+      margin: 0 auto 18px;
+    }
+
+    header h1 {
+      margin: 0 0 6px;
+      font-size: 34px;
+      color: var(--accent);
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: .95;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 20px auto 30px;
+      padding: 30px;
+      background: var(--panel);
+      border-radius: 20px;
+      box-shadow: 0 5px 25px rgba(0,0,0,0.4);
+    }
+
+    h2 {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 8px;
+      margin: 0 0 18px;
+      font-size: 22px;
+    }
+
+    .lead { margin-top: 10px; line-height: 1.8; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+
+    .card {
+      background: var(--panel-deeper);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.25);
+    }
+
+    .contact p { font-size: 18px; margin: 8px 0; }
+    .contact a{ color: var(--text); text-decoration: none; }
+    .contact a:hover{ text-decoration: underline; }
+
+    .social a {
+      display: inline-block;
+      padding: 12px 22px;
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: 700;
+      margin: 6px 6px 0;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: .25s;
+    }
+    .social a i { margin-left: 8px; }
+    .social a:hover { background:var(--white); color: var(--bg); transform: translateY(-1px) scale(1.03); }
+
+    /* ====== الخريطة ====== */
+    .map-wrap {
+      margin-top: 12px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.35);
+      background: var(--panel-deeper);
+    }
+    .map-responsive { position: relative; width: 100%; padding-top: 56.25%; }
+    .map-responsive iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .map-actions { display: flex; gap: 10px; flex-wrap: wrap; padding: 12px; background: var(--panel-deeper); }
+    .btn-outline {
+      display: inline-flex; align-items:center; gap:8px;
+      padding: 10px 16px; border-radius: 999px;
+      border: 2px solid var(--accent); color: var(--accent);
+      text-decoration: none; font-weight: 700; transition: .25s;
+    }
+    .btn-outline:hover { background: var(--accent); color: var(--bg); }
+
+    /* ====== شريط الجوال المثبت ====== */
+    .mobile-cta {
+      position: fixed; left: 0; right: 0; bottom: 10px; z-index: 9999;
+      display: none; justify-content: center; gap: 10px;
+      padding: 0 12px;
+    }
+    .mobile-cta a {
+      flex:1; max-width: 220px;
+      display:flex; align-items:center; justify-content:center; gap:8px;
+      background: var(--accent); color: var(--bg);
+      text-decoration:none; font-weight:800; padding: 12px 16px; border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+    .mobile-cta a:active{ transform: translateY(1px); }
+
+    footer {
+      text-align: center; padding: 20px;
+      background: var(--panel); margin-top: 30px; font-size: 14px;
+    }
+
+    /* ====== تجاوب ====== */
+    @media (max-width: 900px){
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px){
+      header h1 { font-size: 26px; }
+      .social a { display:block; margin:10px auto 0; text-align:center; }
+      .map-actions { justify-content: center; }
+      .mobile-cta { display:flex; }
+      body { padding-bottom: 86px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!-- شعار مكبّر للضعف مع Fallback -->
+    <object data="logo.svg" type="image/svg+xml" width="280" height="280" aria-label="شعار أونورا بوتيك">
+      <img src="logo.png" alt="شعار أونورا بوتيك" width="280" height="280">
+    </object>
+
+    <h1>أونورا بوتيك</h1>
+    <p>إكسسوارات ومجوهرات راقية بأسلوب عصري فاخر</p>
+  </header>
+
+  <div class="container">
+    <div class="grid-2">
+      <!-- عمود 1: من نحن -->
+      <section class="card">
+        <h2>عنّا</h2>
+        <p class="lead">
+          نقدم لكم مجموعة مختارة من الإكسسوارات والحُلي عالية الجودة،
+          بتصاميم تجمع بين الفخامة والحداثة لتليق بكل مناسبة.
+        </p>
+      </section>
+
+      <!-- عمود 2: تواصل + خريطة + سوشيال -->
+      <section class="card contact">
+        <h2>معلومات التواصل</h2>
+        <p>📍 العنوان: Rue des Fidayines، باتنة 05000، الجزائر</p>
+        <p>📞 الهاتف: <a href="tel:00213672120832">00213672120832</a></p>
+        <p>💬 واتساب: <a href="https://wa.me/213672120832" target="_blank" rel="noopener">اضغط للتواصل الفوري</a></p>
+
+        <div class="map-wrap" aria-label="خريطة موقع المتجر">
+          <div class="map-responsive">
+            <iframe
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?hl=ar&q=35.55276432022615,6.175172571349666&z=16&output=embed">
+            </iframe>
+          </div>
+          <div class="map-actions">
+            <a class="btn-outline" target="_blank"
+               href="https://www.google.com/maps?q=35.55276432022615,6.175172571349666">
+              <i class="fa-solid fa-map-location-dot"></i> فتح في خرائط Google
+            </a>
+            <a class="btn-outline" target="_blank"
+               href="https://www.google.com/maps/dir/?api=1&destination=35.55276432022615,6.175172571349666">
+              <i class="fa-solid fa-route"></i> الحصول على الاتجاهات
+            </a>
+          </div>
+        </div>
+
+        <div class="social" style="margin-top:18px">
+          <a href="https://www.facebook.com/share/19TZpCt9Dt/" target="_blank" rel="noopener">
+            <i class="fab fa-facebook-f"></i> فيسبوك
+          </a>
+          <a href="https://instagram.com/onora.boutique" target="_blank" rel="noopener">
+            <i class="fab fa-instagram"></i> انستغرام
+          </a>
+          <a href="https://wa.me/213672120832" target="_blank" rel="noopener">
+            <i class="fab fa-whatsapp"></i> واتساب
+          </a>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- شريط إجراءات للجوال -->
+  <div class="mobile-cta" aria-label="اتصال سريع">
+    <a href="tel:+213672120832"><i class="fa-solid fa-phone"></i> اتصال</a>
+    <a href="https://wa.me/213672120832" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> واتساب</a>
+  </div>
+
+  <footer>
+    <p>© 2025 جميع الحقوق محفوظة - أونورا بوتيك</p>
+  </footer>
+
+</body>
+</html>
